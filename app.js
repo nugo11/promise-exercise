@@ -22,7 +22,7 @@ Promise.all([CheckPromis1(), CheckPromis2(), CheckPromis3()]).then(
   (Response) => {
     console.log(Response);
   }
-);
+).catch(console.log);
 
 //2)დავწეროთ ასინქრონული ფუნქციები სადაც გვექნება Promise, რომლის მიხედვითაც პირობითად მოგვდის ოთხი სერვერიდან
 // user data და ეს Promise უნდა აბრუნებდეს სხვასხვა დატას, მაგალითად [{id: 1, name: 'luka', isAdmin: false}]
@@ -75,4 +75,4 @@ let userData3 = () => {
 
 Promise.race([userData1(), userData2(), userData3()]).then((Response1) => {
   console.log(Response1);
-});
+}).catch(console.log);
